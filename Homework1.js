@@ -40,3 +40,18 @@ function shallowCompare(a,b) {
    return true
   }
 }
+
+
+//3. Given an array. Determine whether it consists only from uniques or not.
+
+function duplicateCheck(a){
+let arr2 = []
+  for (let i = 0; i < a.length; i++) {
+    if(arr2[a[i]]) {
+    	return true
+    }
+    else
+      arr2[a[i]] = a[i]
+  }
+  return false
+}
