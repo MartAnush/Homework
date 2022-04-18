@@ -55,3 +55,16 @@ function duplicateCheck(a){
               	}
     } return 'does not have duplicate'
 }
+
+
+//4. Determine if a word or phrase is an isogram. An isogram (also known as a &quot;non pattern
+//word&quot;) is a word or phrase without a repeating letter.
+
+let t = "the isogramm"
+let myArray = t.split("")
+
+newMyArray = myArray.filter(function fn(el, i, a){
+  if(el !== " "){
+  return true}
+})
+alert(duplicateCheck(newMyArray))
