@@ -48,7 +48,7 @@ function shallowCompare(a,b) {
 function duplicateCheck(a){
   let arr2 = []
   for (let i = 0; i < a.length; i++) {
-  arr2.push(a[i]);
+  	arr2.push(a[i]);
   	for (let j = 0; j < arr2.length; j++){
 		if (a[i] == arr2[j-1]) {
 			return 'has duplicate'}    
