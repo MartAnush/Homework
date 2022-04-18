@@ -44,14 +44,14 @@ function shallowCompare(a,b) {
 
 //3. Given an array. Determine whether it consists only from uniques or not.
 
+
 function duplicateCheck(a){
-let arr2 = []
+  let arr2 = []
   for (let i = 0; i < a.length; i++) {
-    if(arr2[a[i]]) {
-    	return true
-    }
-    else
-      arr2[a[i]] = a[i]
-  }
-  return false
+  arr2.push(a[i]);
+  	for (let j = 0; j < arr2.length; j++){
+		if (a[i] == arr2[j-1]) {
+			return 'has duplicate'}    
+              	}
+    } return 'does not have duplicate'
 }
