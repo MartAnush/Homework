@@ -11,3 +11,20 @@ function isSorted(a) {
     }
   return '-1'
 }
+
+
+2. Given an array consisting from the arrays of numbers (like a two-dimensional array).
+Find sum of each row and print them as an array
+
+
+let arr = [[ 8, 35, 2], [8], [5, 6, -5 , -6], [1, 3, -9, 0, -1]]
+
+result = aaa.map(sumOfArrays)
+
+function sumOfArrays(a) {
+sum = 0
+  for (let i = 0; i< a.length; i++) {
+    sum += a[i]
+  }
+return sum
+}
