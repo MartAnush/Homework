@@ -28,3 +28,20 @@ sum = 0
   }
 return sum
 }
+
+
+
+
+3. Given an array of integers. Write a function that return new array from first array,
+where removed even numbers, and odd numbers was multiplied with new array length
+
+let arr = [5, 4, 78, 0, -3, 7]
+
+oddArr = arr.filter(function(el, i, a) {
+	if (el % 2 !== 0)
+  return true
+})
+
+result = oddArr.map(function(el, i, a) {
+  return el * a.length
+})
