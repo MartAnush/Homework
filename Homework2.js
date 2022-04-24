@@ -45,3 +45,28 @@ oddArr = arr.filter(function(el, i, a) {
 result = oddArr.map(function(el, i, a) {
   return el * a.length
 })
+
+
+
+4. Given a number. Write a function that calculates its sum of the digits and if that sum
+has more than 1 digit find the sum of digits of that number. Repeat that process if needed and
+return the result.
+
+let number = 559
+
+function sumOfArrays(a) {
+
+let arr = Array.from(String(a), Number)
+
+sum = 0
+  for (let i = 0; i< arr.length; i++) {
+    sum += arr[i]
+  }
+  
+  if (sum > 9) {
+    sumOfArrays (sum)
+  }
+  
+return sum
+}
+
