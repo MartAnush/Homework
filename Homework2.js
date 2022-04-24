@@ -13,6 +13,7 @@ function isSorted(a) {
 }
 
 
+
 2. Given an array consisting from the arrays of numbers (like a two-dimensional array).
 Find sum of each row and print them as an array
 
@@ -28,7 +29,6 @@ sum = 0
   }
 return sum
 }
-
 
 
 
@@ -70,3 +70,25 @@ sum = 0
 return sum
 }
 
+
+
+5. Write a recursive function which receives  a number as arguments and returns the
+fibonacci sequence as array.
+
+function fibNumber(a) {
+
+let digit1 = 0
+let digit2 = 1
+let arr = [1]
+
+for(let i = 1; i < a; i++ ) {
+  
+	let sum = digit1 + digit2
+	digit1 = digit2 
+	digit2 = sum 
+	arr.push(sum)
+}
+
+return arr
+
+}
