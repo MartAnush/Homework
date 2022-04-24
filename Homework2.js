@@ -20,9 +20,12 @@ Find sum of each row and print them as an array
 
 let arr = [[ 8, 35, 2], [8], [5, 6, -5 , -6], [1, 3, -9, 0, -1]]
 
-result = arr.map(sumOfArrays)
+function sumOfArrays(array){
+ result = array.map(toSum)
+ return result
+}
 
-function sumOfArrays(a) {
+function toSum(a) {
 sum = 0
   for (let i = 0; i< a.length; i++) {
     sum += a[i]
