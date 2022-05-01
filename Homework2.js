@@ -26,7 +26,7 @@ function sumOfArrays(array){
 }
 
 function toSum(a) {
-sum = 0
+let sum = 0
   for (let i = 0; i< a.length; i++) {
     sum += a[i]
   }
@@ -61,13 +61,13 @@ function sumOfArrays(a) {
 
 let arr = Array.from(String(a), Number)
 
-sum = 0
+let sum = 0
   for (let i = 0; i< arr.length; i++) {
     sum += arr[i]
   }
   
   if (sum > 9) {
-    sumOfArrays (sum)
+    return sumOfArrays (sum)
   }
   
 return sum
