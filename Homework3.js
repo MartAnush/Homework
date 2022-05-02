@@ -23,3 +23,30 @@ function  flatten (a) {
 	} 
     return arr;
 }
+
+
+4. Given the list of the following readers:
+[
+{ book: &quot;Catcher in the Rye&quot;, readStatus: true, percent: 40},
+{ book: &quot;Animal Farm&quot;, readStatus: true, percent: 20},
+{ book: &quot;Solaris&quot;, readStatus: false, percent: 90 },
+{ book: &quot;The Fall&quot;, readStatus: true, percent: 50 },
+{ book: &quot;White Nights&quot;, readStatus: false, percent: 60 } ,
+{ book: &quot;After Dark&quot;, readStatus: true, percent: 70 }
+];
+Output the books sorted by the percent in descending order which readStatus is true.
+
+
+function sortFilter(arr){
+	
+  let sortedArr = arr.sort(function (a, b) {
+    return b.percent - a.percent;
+  });
+
+  let filteredArr = sortedArr.filter(function(element){
+    if (element.readStatus == true ) {
+    return true
+    }
+  })
+  return filteredArr
+}
