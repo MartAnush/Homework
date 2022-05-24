@@ -1,3 +1,7 @@
+2.   Write a JavaScript function to get all possible subsets of given length of the given array.
+Assume that all elements in the array are unique.
+
+
 function getAllSubsets(array,n) {
     const subsets = [[]];
     
@@ -8,6 +12,5 @@ function getAllSubsets(array,n) {
         }
     }
     const filtered = subsets.filter(ar => ar.length == n)
-  
     return filtered;
 }
