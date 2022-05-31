@@ -14,28 +14,35 @@ function createArray(obj, result = []){
 
 3. Implement binary search.
 
-function binaryExtract(array, value) {
-  newArray = array.sort(function(a, b){return a - b});
-  let mid = newArray[Math.floor((newArray.length - 1) / 2)];
+
+
+function binaryExtract(myArray, value) {
+  
+  let mid = myArray[Math.floor((myArray.length - 1) / 2)];
 
 if (mid == value) {
 	return value;
 }
 
-if (newArray.lenght == 1 && newArray[0] != value) {
+if (myArray.lenght == 1 && myArray[0] != value) {
 	return -1;
 }
-else if (newArray.lenght == 1 && newArray[0] == value) {
+else if (myArray.lenght == 1 && myArray[0] == value) {
 	return value;
 }
 
  if (value >= mid ) {
-		newArray = newArray.slice(newArray.indexOf(mid) +1)
-  return binaryExtract(newArray, value)
+		myArray = myArray.slice(myArray.indexOf(mid) +1)
+  return binaryExtract(myArray, value)
 } else if(value < mid) {
-		newArray = newArray.slice(0, - newArray.indexOf(mid) -1)
- 	return binaryExtract(newArray, value)
+		myArray = myArray.slice(0, - myArray.indexOf(mid) -1)
+ 	return binaryExtract(myArray, value)
 }
 return -1;
 }
 
+array =[4,2,55,104,7,9,3,785,34,152,74,68,452]
+
+sortedArray = array.sort(function(a, b){return a - b});
+
+console.log(binaryExtract(sortedArray,4))
